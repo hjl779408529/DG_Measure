@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DG_Measure", "DG_Measure\DG_Measure.csproj", "{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Debug|x64.ActiveCfg = Debug|x64
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Debug|x64.Build.0 = Debug|x64
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Debug|x86.ActiveCfg = Debug|x86
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Debug|x86.Build.0 = Debug|x86
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Release|x64.ActiveCfg = Release|x64
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Release|x64.Build.0 = Release|x64
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Release|x86.ActiveCfg = Release|x86
+		{55C3B42F-77D6-4EF1-A4F4-EA4B19FC6169}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {759AB3E9-530C-4890-B76E-34A11A67F2AB}
+	EndGlobalSection
+EndGlobal
