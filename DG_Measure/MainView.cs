@@ -412,6 +412,7 @@ namespace DG_Measure
         private void CodeResolve()
         {
             MessageBox.Show("接收成功！");
+
         }
         /// <summary>
         /// 权限判断
