@@ -5,6 +5,7 @@ using System.Data.Common;
 using System.Data.OleDb;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace DG_Measure
 {
@@ -68,10 +69,13 @@ namespace DG_Measure
         {
             List<string> Result = new List<string>();
             UpdateDatable();
-            foreach (DataRow row in DB_Table.Rows)
-            {
-                Result.Add(row[fields].ToString());
-            }
+            /**方法一**/
+            //foreach (DataRow row in DB_Table.Rows)
+            //{
+            //    Result.Add(row[fields].ToString());
+            //}
+            /**方法二**/
+            Result = (from d in DB_Table.AsEnumerable() select d.Field<string>(fields)).ToList();
             return Result;
         }
         /// <summary>

@@ -10,6 +10,7 @@ using System.Threading;
 using System.Windows.Forms;
 using HslCommunication.LogNet;
 using SharpConfig;
+using System.Collections;
 
 namespace DG_Measure
 {
@@ -211,71 +212,71 @@ namespace DG_Measure
         private void Cancel_Button_Click(object sender, EventArgs e)
         {
             Password_Input.Text = "";//清空密码输入框
-            Dictionary<string, object> keys = new Dictionary<string, object>
-            {
-                {"序号", "02"},
-                {"测量模式", "02"},
-                {"条码", "02"},
-                {"生产时间", "02"},
-                {"操作员ID", "02"},
-                {"班次", "02"},
-                {"设备ID", "02"},
-                {"工序名", "02"},
-                {"判定结果", "02"},
-                {"电池厚度", "02"},
-                {"电池宽度", "02"},
-                {"电池壳体高度", "02"},
-                {"电池A面多点凸度", "02"},
-                {"电池B面多点凸度", "02"},
-                {"电池正极极柱高", "02"},
-                {"电池负极极柱高", "02"},
-                {"电池正极极柱平面度", "02"},
-                {"电池负极极柱平面度", "02"},
-                {"电池正负极柱平行度", "02"},
-                {"电池负正极柱平行度", "02"},
-                {"电池正极柱与底部平行度", "02"},
-                {"电池负极柱与底部平行度", "02"},
-                {"MP1aToMP1b厚度", "02"},
-                {"MP2aToMP2b厚度", "02"},
-                {"MP3aToMP3b厚度", "02"},
-                {"MP4aToMP4b厚度", "02"},
-                {"MP5aToMP5b厚度", "02"},
-                {"MP6aToMP6b厚度", "02"},
-                {"MP7aToMP7b厚度", "02"},
-                {"MP30aToMP30b厚度", "02"},
-                {"MP31aToMP31b厚度", "02"},
-                {"MP32aToMP32b厚度", "02"},
-                {"MP33aToMP33b厚度", "02"},
-                {"MP34aToMP34b厚度", "02"},
-                {"MP35aToMP35b厚度", "02"},
-                {"MP36aToMP36b厚度", "02"},
-                {"MP37aToMP37b厚度", "02"},
-                {"MP38aToMP38b厚度", "02"},
-                {"MP39aToMP39b厚度", "02"},
-                {"MP8aToMP8b宽度", "02"},
-                {"MP9aToMP9b宽度", "02"},
-                {"MP10aToMP10b宽度", "02"},
-                {"MP11aToMP11b宽度", "02"},
-                {"M12PaToMP12b高度", "02"},
-                {"MP13aToMP13b高度", "02"},
-                {"MP14aToMP14b高度", "02"},
-                {"MP15aToMP15b高度", "02"},
-                {"MP16aToMP16b高度", "02"},
-                {"MP17aToMP17b高度", "02"},
-                {"MP18aToMP18b高度", "02"},
-                {"MP19aToMP19b高度", "02"},
-                {"MP20aToMP20b高度", "02"},
-                {"MP21aToMP21b高度", "02"},
-                {"MP22aToMP22b高度", "02"},
-                {"MP23aToMP23b高度", "02"},
-                {"MP24aToMP24b高度", "02"},
-                {"MP25aToMP25b高度", "02"},
-                {"MP26aToMP26b高度", "02"},
-                {"MP27aToMP27b高度", "02"},
-                {"MP28aToMP28b高度", "02"},
-                {"MP29aToMP29b高度", "02"}
-            };
-            DB_Work.addToDB(keys);
+            //Dictionary<string, object> keys = new Dictionary<string, object>
+            //{
+            //    //{"序号", "02"},
+            //    {"测量模式", "02"},
+            //    {"条码", "02"},
+            //    {"生产时间", "02"},
+            //    {"操作员ID", "02"},
+            //    {"班次", "02"},
+            //    {"设备ID", "02"},
+            //    {"工序名", "02"},
+            //    {"判定结果", "02"},
+            //    {"电池厚度", "02"},
+            //    {"电池宽度", "02"},
+            //    {"电池壳体高度", "02"},
+            //    {"电池A面多点凸度", "02"},
+            //    {"电池B面多点凸度", "02"},
+            //    {"电池正极极柱高", "02"},
+            //    {"电池负极极柱高", "02"},
+            //    {"电池正极极柱平面度", "02"},
+            //    {"电池负极极柱平面度", "02"},
+            //    {"电池正负极柱平行度", "02"},
+            //    {"电池负正极柱平行度", "02"},
+            //    {"电池正极柱与底部平行度", "02"},
+            //    {"电池负极柱与底部平行度", "02"},
+            //    {"MP1aToMP1b厚度", "02"},
+            //    {"MP2aToMP2b厚度", "02"},
+            //    {"MP3aToMP3b厚度", "02"},
+            //    {"MP4aToMP4b厚度", "02"},
+            //    {"MP5aToMP5b厚度", "02"},
+            //    {"MP6aToMP6b厚度", "02"},
+            //    {"MP7aToMP7b厚度", "02"},
+            //    {"MP30aToMP30b厚度", "02"},
+            //    {"MP31aToMP31b厚度", "02"},
+            //    {"MP32aToMP32b厚度", "02"},
+            //    {"MP33aToMP33b厚度", "02"},
+            //    {"MP34aToMP34b厚度", "02"},
+            //    {"MP35aToMP35b厚度", "02"},
+            //    {"MP36aToMP36b厚度", "02"},
+            //    {"MP37aToMP37b厚度", "02"},
+            //    {"MP38aToMP38b厚度", "02"},
+            //    {"MP39aToMP39b厚度", "02"},
+            //    {"MP8aToMP8b宽度", "02"},
+            //    {"MP9aToMP9b宽度", "02"},
+            //    {"MP10aToMP10b宽度", "02"},
+            //    {"MP11aToMP11b宽度", "02"},
+            //    {"M12PaToMP12b高度", "02"},
+            //    {"MP13aToMP13b高度", "02"},
+            //    {"MP14aToMP14b高度", "02"},
+            //    {"MP15aToMP15b高度", "02"},
+            //    {"MP16aToMP16b高度", "02"},
+            //    {"MP17aToMP17b高度", "02"},
+            //    {"MP18aToMP18b高度", "02"},
+            //    {"MP19aToMP19b高度", "02"},
+            //    {"MP20aToMP20b高度", "02"},
+            //    {"MP21aToMP21b高度", "02"},
+            //    {"MP22aToMP22b高度", "02"},
+            //    {"MP23aToMP23b高度", "02"},
+            //    {"MP24aToMP24b高度", "02"},
+            //    {"MP25aToMP25b高度", "02"},
+            //    {"MP26aToMP26b高度", "02"},
+            //    {"MP27aToMP27b高度", "02"},
+            //    {"MP28aToMP28b高度", "02"},
+            //    {"MP29aToMP29b高度", "02"}
+            //};
+            //DB_Work.addToDB(keys);
         }
         /// <summary>
         /// 
@@ -326,6 +327,12 @@ namespace DG_Measure
             //para.Ip = "192.168.1.1";
             //OperatePara.SavePara("Para.cfg", para);
             //Parameter para1 = OperatePara.LoadPara("Para.cfg");
+
+            string[] strArr = { "a", "b", "c", "d", "e" };
+            bool exists = ((IList)strArr).Contains("a");
+            string str = string.Join("#", strArr);
+            string[] str2 = str.Split('#');
+
         }
         /// <summary>
         /// 窗口关闭
@@ -412,7 +419,6 @@ namespace DG_Measure
         private void CodeResolve()
         {
             MessageBox.Show("接收成功！");
-
         }
         /// <summary>
         /// 权限判断
